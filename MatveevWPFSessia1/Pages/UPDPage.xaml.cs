@@ -27,11 +27,12 @@ namespace MatveevWPFSessia1.Pages
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
-
+            FrameClass.frame.Navigate(new OrdersPage());
         }
 
         private void btnBasket_Click(object sender, RoutedEventArgs e)
         {
+
 
         }
     }
