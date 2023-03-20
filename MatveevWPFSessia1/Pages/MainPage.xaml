@@ -1,0 +1,31 @@
+﻿<Page x:Class="MatveevWPFSessia1.Pages.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MatveevWPFSessia1.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainPage">
+
+    <Grid  x:Name="Authorization" Margin="0,75,0,0">
+
+        <StackPanel Margin="50,35,50,0">
+            <StackPanel>
+                <TextBlock Text="Авторизация" Style="{StaticResource TBStyle}"/>
+            </StackPanel>
+            <StackPanel>
+                <GroupBox Header="Введите логин">
+                    <TextBox Name="Login" Text="loginDEpxl2018"/>
+
+                </GroupBox>
+                <GroupBox Header="Введите пароль">
+                    <PasswordBox Name="Password" Password="P6h4Jq"/>
+                </GroupBox>
+            </StackPanel>
+            <Button Name="btn_In"  Content="Авторизоваться"  Click="btn_In_Click" Style="{StaticResource btnstyle1}"/>
+            <Button Name="guest"  Content="Войти гостем"  Click="guest_Click" Style="{StaticResource btnstyle1}"/>
+            <TextBlock x:Name="tbNewCode" Text="Повторно можно будет войти через 10 секунд" FontSize="22" TextWrapping="Wrap" Visibility="Collapsed" Style="{StaticResource TBStyle}" />
+        </StackPanel>
+    </Grid>
+</Page>

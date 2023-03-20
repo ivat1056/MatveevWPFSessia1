@@ -1,0 +1,20 @@
+﻿<Window x:Class="MatveevWPFSessia1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MatveevWPFSessia1"
+        WindowStartupLocation="CenterScreen"
+         Style="{StaticResource ResourceKey= BColor}"
+        mc:Ignorable="d" Icon="/Resourse/icon.ico" FontFamily="Comic Sans MS"
+        Title="Пиши-стирай" Height="600" Width="800">
+    <Grid>
+        <Frame Name="frame" NavigationUIVisibility="Hidden">
+        </Frame>
+        <StackPanel Orientation="Horizontal" Margin="20,0,0,450">
+        <Image x:Name="Logo"  Height="100" Margin="0,0,50,0" Source="/Resourse/logo.png"  />
+            <TextBlock Text="ООО «Пиши-стирай»" FontSize="36"  Style="{StaticResource ResourceKey=TBStyle}" />
+
+        </StackPanel>
+    </Grid>
+</Window>
