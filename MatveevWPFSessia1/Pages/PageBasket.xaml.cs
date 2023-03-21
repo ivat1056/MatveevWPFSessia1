@@ -104,10 +104,7 @@ namespace MatveevWPFSessia1.Pages
             }
             
             MessageBox.Show("Заказ успешно создан");
-            //Ticket ticket = new Ticket(order, bascet, summa, summaDiscount, countDay);
-            //ticket.ShowDialog();
-            //bascet.Clear();
-            //this.Close();
+            
 
         }
 
