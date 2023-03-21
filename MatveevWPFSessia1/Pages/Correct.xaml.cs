@@ -31,6 +31,10 @@ namespace MatveevWPFSessia1.Pages
             basket12 = basket;
             cbSort.SelectedIndex = 0;
             cbFilt.SelectedIndex = 0;
+            if((RoleU == 1) || (RoleU == 2))
+            {
+                btOrders.Visibility = Visibility.Visible;
+            }
 
         }
         public Correct(int Role2)
@@ -41,6 +45,10 @@ namespace MatveevWPFSessia1.Pages
             cbSort.SelectedIndex = 0;
             cbFilt.SelectedIndex = 0;
             basket12 = new List<BasketClass>();
+            if ((RoleU == 1) || (RoleU == 2))
+            {
+                btOrders.Visibility = Visibility.Visible;
+            }
         }
 
         private void lvProduct_PreviewMouseUp(object sender, MouseButtonEventArgs e)

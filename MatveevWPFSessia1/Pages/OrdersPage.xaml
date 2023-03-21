@@ -8,9 +8,9 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="OrdersPage">
 
-    <Grid Margin="0,134,0,0">
-           
-            <ListView x:Name="lvListOrders" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Grid.Row="1">
+    <Grid Margin="0,100,0,0">
+        <StackPanel>
+            <ListView x:Name="lvListOrders" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="0,0,0,20" Height="292">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch" />
@@ -71,5 +71,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+            <Button x:Name="btnBack" Style="{StaticResource btnstyle1}" Content="Назад" Click="btnBack_Click" Width="150"/>
+        </StackPanel>
     </Grid>
 </Page>

@@ -22,7 +22,7 @@
             <ComboBox Name="cbStatus" Grid.Row="1" MinWidth="300"/>
         </StackPanel>
         <Grid Grid.Row="2">
-            <Button x:Name="btnBack" Style="{StaticResource btnstyle1}" Content="Отмена"  HorizontalAlignment="Left" Click="btnBack_Click" Margin="5,10,0,4"/>
+            <Button x:Name="btnBack" Style="{StaticResource btnstyle1}" Content="Назад"  HorizontalAlignment="Left" Click="btnBack_Click" Margin="5,10,0,4"/>
             <Button x:Name="btnBasket" Style="{StaticResource btnstyle1}" Content="Применить" HorizontalAlignment="Center" Click="btnBasket_Click" Margin="0,10,0,4"/>
         </Grid>
 

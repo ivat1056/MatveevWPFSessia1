@@ -96,7 +96,7 @@
             <TextBlock Name="CountRecords"/>
             <StackPanel Orientation="Horizontal" Width="510">
                 <Button Name="Basket" Click="Basket_Click" Content="Корина" Style="{StaticResource btnstyle1}" Width="223"  />
-                <Button Name="Orders"  Click="Orders_Click" Content="Заказы" Style="{StaticResource btnstyle1}" Width="264"  />
+                <Button x:Name="btOrders"  Click="Orders_Click" Content="Заказы" Style="{StaticResource btnstyle1}" Width="264" Visibility="Hidden" />
             </StackPanel>
         </StackPanel>
 

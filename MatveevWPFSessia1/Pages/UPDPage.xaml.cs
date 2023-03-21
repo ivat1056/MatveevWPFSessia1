@@ -1,4 +1,7 @@
-﻿using System.Windows;
+﻿using MatveevWPFSessia1.Class;
+using System;
+using System.Linq;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace MatveevWPFSessia1.Pages
@@ -8,9 +11,16 @@ namespace MatveevWPFSessia1.Pages
     /// </summary>
     public partial class UPDPage : Page
     {
-        public UPDPage()
+        Order order;
+        public UPDPage(Order order)
         {
             InitializeComponent();
+            this.order = order;
+            dpDeliveryDate.SelectedDate = order.OrderDeliveryDate;
+            cbStatus.ItemsSource = Base.ep.OrderStatus.ToList();
+            cbStatus.SelectedValuePath = "OrderStatus";
+            cbStatus.DisplayMemberPath = "Name";
+            cbStatus.SelectedValue = order.OrderStatusID;
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
@@ -20,10 +30,18 @@ namespace MatveevWPFSessia1.Pages
 
         private void btnBasket_Click(object sender, RoutedEventArgs e)
         {
-            //order.OrderStatusID = cbStatus.SelectedIndex + 1;
-            //Base.ep.SaveChanges();
-            //order.OrderStatusID = cbStatus.SelectedIndex + 1;
-            //Base.ep.SaveChanges();
+            try
+            {
+                order.OrderDeliveryDate = (DateTime)dpDeliveryDate.SelectedDate;
+                order.OrderStatusID = cbStatus.SelectedIndex + 1;
+                Base.ep.SaveChanges();
+                MessageBox.Show("Изменение");
+                FrameClass.frame.Navigate(new OrdersPage());
+            }
+            catch 
+            {
+                MessageBox.Show("Ошибка");
+            }
 
         }
     }

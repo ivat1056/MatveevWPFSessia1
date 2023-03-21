@@ -21,6 +21,9 @@ namespace MatveevWPFSessia1.Pages
     /// </summary>
     public partial class OrdersPage : Page
     {
+        List<BasketClass> basket;
+        Order order;
+        int role;
         public OrdersPage()
         {
             InitializeComponent();
@@ -29,7 +32,17 @@ namespace MatveevWPFSessia1.Pages
 
         private void btnChange_Click(object sender, RoutedEventArgs e)
         {
-            FrameClass.frame.Navigate(new UPDPage());
+
+            Button btn = (Button)sender;
+            int index = Convert.ToInt32(btn.Uid);
+            Order order = Base.ep.Order.FirstOrDefault(x => x.OrderID == index);
+            FrameClass.frame.Navigate(new UPDPage(order));
+
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            FrameClass.frame.Navigate(new Correct(role,basket));
         }
     }
 }
