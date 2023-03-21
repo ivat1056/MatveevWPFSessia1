@@ -198,6 +198,8 @@
     <None Include="Base.edmx.diagram">
       <DependentUpon>Base.edmx</DependentUpon>
     </None>
+    <None Include="File\MatveevIvanUP.docx" />
+    <None Include="File\Система оценивания %282%29.xlsx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
